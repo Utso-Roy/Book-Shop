@@ -1,5 +1,5 @@
 const getStorage = () => {
-    const storedBookId = localStorage.getItem('readList')
+    const storedBookId = localStorage.getItem("readList")
     if (storedBookId) {
         const storeParseDate = JSON.parse(storedBookId)
         return storeParseDate;
@@ -18,9 +18,9 @@ const setStorage = (id) => {
     else {
          storeParseDate.push(id)
         const data = JSON.stringify(storeParseDate);
-        localStorage.setItem('readList' , data);
+        localStorage.setItem("readList" , data);
     }
 
 }
 
-export {setStorage,getStorage}
+export  {setStorage,getStorage}

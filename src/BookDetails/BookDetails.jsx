@@ -1,21 +1,31 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { setStorage } from '../Utility/Utility';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+import { ToastContainer, toast } from 'react-toastify';
+
+const MySwal = withReactContent(Swal)
+
+
 
 const BookDetails = () => {
   const { id } = useParams()
     const parseConvertData = parseInt(id)
-  const loaderData = useLoaderData()||[]
+  const loaderData = useLoaderData() || [];
   const findData = loaderData.find(matchData => matchData.bookId === parseConvertData)
     const {  bookName, bookId, author,publisher,totalPages ,image, tags,review, rating, category, yearOfPublishing} = findData
   const handelmarkAsRead = (id) => {
-      console.log(id)
-            
+    toast("Wow so easy!")
+
+    MySwal.fire({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success"
+    });
        setStorage(id)
 
         }
-
-
     return (
         <div>
 
@@ -36,7 +46,7 @@ const BookDetails = () => {
                                 tags.map(tag => <button className=' text-[#28ca28] btn mr-10'> {tag}</button> )
                             }</p>
                         </div>
-
+                        <ToastContainer />
                         <div className='my-5'>
                             <p>Number of Pages : <span className='font-semibold'> {totalPages} </span>  </p>
                             <p>Publisher : <span className='font-semibold'> {publisher}</span> </p>

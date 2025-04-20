@@ -3,7 +3,7 @@ import { CiStar } from "react-icons/ci";
 import { Link } from "react-router";
 
 const Book = ({ book }) => {
-  const { bookName, author, bookId ,image, tags, rating, category, } =
+  const { bookName, author, bookId ,image, tags, rating, category,totalPages } =
     book;
     return (
         <Link to={`/bookDetails/${bookId}`}>
@@ -19,7 +19,8 @@ const Book = ({ book }) => {
             ))}
           </div>
           <h2 className="card-title">{bookName}</h2>
-          <h3>By : {author}</h3>
+              <h3>By : {author}</h3>
+              <p>Total pages : {totalPages}</p>
           <div className=" justify-end">
             <div className="flex justify-between border-t-1 p-1 border-dashed">
               <h4 className="font-semibold">{category}</h4>
