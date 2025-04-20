@@ -9,7 +9,6 @@ const getStorage = () => {
     }
 
 }
-
 const setStorage = (id) => {
     const storeParseDate = getStorage();
 
@@ -24,4 +23,4 @@ const setStorage = (id) => {
 
 }
 
-export {setStorage}
+export {setStorage,getStorage}

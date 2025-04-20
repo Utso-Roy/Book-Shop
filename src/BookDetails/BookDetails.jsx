@@ -5,7 +5,7 @@ import { setStorage } from '../Utility/Utility';
 const BookDetails = () => {
   const { id } = useParams()
     const parseConvertData = parseInt(id)
-  const loaderData = useLoaderData()
+  const loaderData = useLoaderData()||[]
   const findData = loaderData.find(matchData => matchData.bookId === parseConvertData)
     const {  bookName, bookId, author,publisher,totalPages ,image, tags,review, rating, category, yearOfPublishing} = findData
   const handelmarkAsRead = (id) => {

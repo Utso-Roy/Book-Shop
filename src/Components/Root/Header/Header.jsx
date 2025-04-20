@@ -13,9 +13,10 @@ const Header = () => {
       <ul
         tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <Link to="/"><li><a>Home</a></li> </Link>
-                            <Link to="/about"><li><a>About</a></li> </Link>
-        <li><a>Pages to Read</a></li>
+                <Link to="/"><li><a>Home</a></li> </Link>
+                <Link to="/about"><li><a>About</a></li> </Link>
+                <Link to="/readList"><li><a>Pages to Read</a></li> </Link>
+
       </ul>
     </div>
     <a className="btn btn-ghost text-xl">Book Vibe</a>
@@ -24,8 +25,7 @@ const Header = () => {
     <ul className="menu menu-horizontal px-1">
       <Link to="/"><li><a>Home</a></li> </Link>
      <Link to="/about"><li><a>About</a></li> </Link>
-     
-      <li><a>Pages to Read</a></li>
+     <Link to="/readList"><li><a>Pages to Read</a></li> </Link>
     </ul>
   </div>
   <div className="navbar-end ">
